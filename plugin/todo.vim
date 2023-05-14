@@ -5,7 +5,6 @@ function! s:Set_options()
     let width = float2nr(ui.width*0.7)
     let height = float2nr(ui.height*0.6)
     " Create the floating window
-    let border = ["🭽", "▔", "🭾", "▕", "🭿", "▁", "🭼", "▏"]
     let opts = {'relative': 'editor',
                 \ 'width': width,
                 \ 'height': height,
@@ -50,7 +49,7 @@ function! TODO()
     call nvim_buf_set_var(buf, 'todo', 1)
 
     let Colors = g:colors_name
-    hi TODOBorder guifg=grey40
+    hi TODOBorder guibg=none
     let opts = <SID>Set_options()
     let win = nvim_open_win(buf, 1, opts)
     call setwinvar(win, '&winhighlight', 'NormalFloat:Normal,FloatBorder:TODOBorder')
