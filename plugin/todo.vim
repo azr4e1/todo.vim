@@ -49,10 +49,10 @@ function! TODO()
     call nvim_buf_set_var(buf, 'todo', 1)
 
     let Colors = g:colors_name
-    hi TODOBorder guibg=none
+    hi TODOBorder guibg=grey40
     let opts = <SID>Set_options()
     let win = nvim_open_win(buf, 1, opts)
-    call setwinvar(win, '&winhighlight', 'NormalFloat:Normal,FloatBorder:TODOBorder')
+    " call setwinvar(win, '&winhighlight', 'NormalFloat:Normal,FloatBorder:TODOBorder')
     call setwinvar(win, '&colorcolumn', '')
     nnoremap <silent><buffer> q :wq<CR>:echo ""<CR>
     setlocal nobuflisted
