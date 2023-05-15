@@ -12,7 +12,7 @@ function! s:Set_options()
                 \ 'col': (ui.width/2) - (width/2),
                 \ 'row': ((ui.height-4)/2) - (height/2),
                 \ 'style': 'minimal',
-                \ 'border': 'rounded',
+                \ 'border': 'solid',
                 \ }
     return opts
 endfunction
